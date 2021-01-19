@@ -1,7 +1,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![GPL-3.0 License][license-shield]][license-url]
-[![hackeri](https://img.shields.io/github/downloads/clangremlini/fet-loader-yougame/total.svg?style=flat-square)](https://github.com/clangremlini/fet-loader-yougame/releases) [![hackeri](https://img.shields.io/github/workflow/status/clangremlini/fet-loader-yougame/FET%20Loader%20CI?style=flat-square)](https://github.com/clangremlini/fet-loader-yougame/actions)
+[![hackeri](https://img.shields.io/github/workflow/status/clangremlini/fet-loader-yougame/FET%20Loader%20CI?style=flat-square)](https://github.com/clangremlini/fet-loader-yougame/actions)
 
 <br />
 <p align="center">
