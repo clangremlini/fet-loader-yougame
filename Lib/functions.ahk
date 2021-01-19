@@ -21,9 +21,10 @@ Bypass(neutron)
 {
     IfNotExist, %A_AppData%\FET Loader\vac-bypass.exe
     {
-        Logging(1,"Downloading vac-bypass.exe...")
-        UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/vac-bypass.exe, %A_AppData%\FET Loader\vac-bypass.exe
-        Logging(1, "done.")
+        Logging(1,"- Extracting vac-bypass.exe...")
+        SetWorkingDir, %A_AppData%\FET Loader
+        FileInstall, FileInstall\cheats\vac-bypass.exe, vac-bypass.exe, 1
+        Logging(1,"......done.")
     }
     Logging(1, "Running bypass...")
     Run, %A_AppData%\FET Loader\vac-bypass.exe
@@ -32,7 +33,7 @@ Bypass(neutron)
 }
 OpenSource(neutron) ; костыли по другому не работают
 {
-    Run, https://github.com/clangremlini/fet-loader
+    Run, https://github.com/clangremlini/fet-loader-yougame
 }
 Inject(neutron, event)
 {
@@ -65,32 +66,6 @@ Inject(neutron, event)
         Logging(1,"Initialized dll injection")
         IniRead, dll, %A_AppData%\FET Loader\cheats.ini, cheats, %event%
         IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
-
-        Loop 3
-        {   
-            IfNotExist, %A_AppData%\FET Loader\%dll%
-            {
-                Logging(1,"Trying to download " dll " from https://github.com/" cheatrepo "/raw/main/" dll " to " A_AppData "\FET Loader\" dll)
-                UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/%dll%, %A_AppData%\FET Loader\%dll%
-                if (ErrorLevel = "0")
-                {
-                    Logging(1, "done.")
-                }
-                else
-                {
-                    timesretrying = times - 1   
-                    Logging(0, "something went wrong. retrying (" timesretrying " times")
-
-                }
-                
-            }
-        }
-        IfNotExist, %A_AppData%\FET Loader\emb.exe
-        {
-            Logging(1,"Downloading emb.exe...")
-            UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/emb.exe, %A_AppData%\FET Loader\emb.exe
-            Logging(1, "done.")
-        }
         Logging(1,"Running emb...")
         CmdLine = emb.exe
         RunCon(CmdLine, Input, Output)

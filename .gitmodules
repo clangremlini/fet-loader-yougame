@@ -1,3 +1,7 @@
 [submodule "ahk2exe"]
 	path = ahk2exe
 	url = https://github.com/clownless/ahk2exe
+
+[submodule "fetloader-dll-repo"]
+	path = FileInstall\cheats
+	url = https://github.com/clangremlini/fetloader-dll-repo

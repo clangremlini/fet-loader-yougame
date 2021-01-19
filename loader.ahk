@@ -50,7 +50,7 @@ FileDelete, %A_AppData%\FET Loader\cheats.ini
 FileDelete, %A_AppData%\FET Loader\*.dll
 
 SetWorkingDir, %A_AppData%\FET Loader
-FileInstall, FileInstall\cheats.ini, cheats.ini, 1
+FileInstall, FileInstall\cheats\cheats.ini, cheats.ini, 1
 
 RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
 RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
@@ -123,14 +123,14 @@ IfNotExist, %A_AppData%\FET Loader\vac-bypass.exe
 {
     Logging(1,"- Extracting vac-bypass.exe...")
     SetWorkingDir, %A_AppData%\FET Loader
-    FileInstall, FileInstall\vac-bypass.exe, vac-bypass.exe, 1
+    FileInstall, FileInstall\cheats\vac-bypass.exe, vac-bypass.exe, 1
     Logging(1,"......done.")
 }
 IfNotExist, %A_AppData%\FET Loader\emb.exe
 {
     Logging(1,"- Extracting emb.exe...")
         SetWorkingDir, %A_AppData%\FET Loader
-    FileInstall, FileInstall\emb.exe, emb.exe, 1
+    FileInstall, FileInstall\cheats\emb.exe, emb.exe, 1
     Logging(1,"......done.")
 }
 Logging(1,"done.")
@@ -185,6 +185,22 @@ FileInstall, FileInstall\Web\css\stylesheet.css, Web\css\stylesheet.css, 1
 FileInstall, FileInstall\Web\css\fonts\GothamPro-Medium.eot, Web\css\fonts\GothamPro-Medium.eot, 1
 FileInstall, FileInstall\Web\css\fonts\GothamPro-Medium.ttf, Web\css\fonts\GothamPro-Medium.ttf, 1
 FileInstall, FileInstall\Web\css\fonts\GothamPro-Medium.woff, Web\css\fonts\GothamPro-Medium.woff, 1
+Logging(1,"......done")
+Logging(1,"- Extracting cheats...")
+FileInstall, FileInstall\cheats\aurora.dll, aurora.dll, 1
+FileInstall, FileInstall\cheats\dorksense.dll, dorksense.dll, 1
+FileInstall, FileInstall\cheats\ftc.dll, ftc.dll, 1
+FileInstall, FileInstall\cheats\memedora.dll, memedora.dll, 1
+FileInstall, FileInstall\cheats\millionmapper.dll, millionmapper.dll, 1
+FileInstall, FileInstall\cheats\Osiris.dll, Osiris.dll, 1
+FileInstall, FileInstall\cheats\osiris.hvh.dll, osiris.hvh.dll, 1
+FileInstall, FileInstall\cheats\otc.dll, otc.dll, 1
+FileInstall, FileInstall\cheats\otv3.vmp.dll, otv3.vmp.dll, 1
+Logging(1,"......done")
+
+
+
+
 
 
 
@@ -259,4 +275,3 @@ NeutronClose:
 Load:
     Gui, Submit, NoHide
     Inject(0,Cheat)
-    
