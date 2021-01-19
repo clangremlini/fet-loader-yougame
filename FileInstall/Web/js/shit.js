@@ -6,7 +6,6 @@ function GetSelectedCheat()
 function CheatButtonClicked()
 {
     document.getElementById("inject_button").disabled = false;
-    GetCheatStatus(GetSelectedCheat());
 }
 function BypassButtonClicked()
 {
@@ -29,23 +28,3 @@ function toggleTheme() {
         setTheme(theme_light, "#000000")
     }
 }
-function GetCheatStatus(cheat) {
-    var status = parseINIString(inifile)["status"][cheat];
-    console.log(status);
-    if (status == "Use at own risk")
-    {
-      document.getElementById("shit").textContent = "Use at own risk";
-      document.getElementById("cheatstatus").className = "text-warning";
-    }
-    if (status == "DETECT")
-    {
-      document.getElementById("shit").textContent = "DETECT";
-      document.getElementById("cheatstatus").className = "text-danger";
-    }
-    if (status == "UNDETECT")
-    {
-      document.getElementById("shit").textContent = "UNDETECT";
-      document.getElementById("cheatstatus").className = "text-success";
-    }
-    return
-  }

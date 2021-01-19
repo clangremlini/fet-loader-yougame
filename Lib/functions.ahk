@@ -9,11 +9,11 @@ ShowAbout(neutron)
 	Gui, About:Font, s9
 	Gui, About:Show, w315 h155, %script% %version% | About
 	Gui, About:Add, Text, x112 y9 w100 h30 +Center, %script% | %bruhshit%
-	Gui, About:Add, Text, x59 y37 w200 h30 +Center, FET лоадер для FET пацанов от разработчиков из FETьмы
+	Gui, About:Add, Text, x59 y40 w200 h30 +Center, FET лоадер для FET пацанов от разработчиков из FETьмы
 	Gui, About:Add, Link, x60 y69 w200 h20 +Center, Разработчики: <a href="https://m4x3r.xyz/">clownless</a>, <a href="https://github.com/toxyxd">toxyxd</a> и <a href="https://rf0x3d.su">rf0x3d</a>
-	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/clangremlini/fet-loader">Github</a>
+	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/clangremlini/fet-loader-yougame">Github</a>
 	Gui, About:Add, Link, x140 y115 w100 h20 +Center, <a href="https://t.me/fetloader">Telegram</a>
-	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://fetloader.xyz">Site</a>
+	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://vk.com/fetloader">VK Group</a>
 	Logging(1,"done.")
 	return  
 }

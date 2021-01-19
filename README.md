@@ -1,7 +1,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![GPL-3.0 License][license-shield]][license-url]
-[![hackeri](https://img.shields.io/github/downloads/clangremlini/fet-loader/total.svg?style=flat-square)](https://github.com/clangremlini/fet-loader/releases) [![hackeri](https://img.shields.io/github/workflow/status/clangremlini/fet-loader/FET%20Loader%20CI?style=flat-square)](https://github.com/clangremlini/fet-loader/actions)
+[![hackeri](https://img.shields.io/github/downloads/clangremlini/fet-loader-yougame/total.svg?style=flat-square)](https://github.com/clangremlini/fet-loader-yougame/releases) [![hackeri](https://img.shields.io/github/workflow/status/clangremlini/fet-loader-yougame/FET%20Loader%20CI?style=flat-square)](https://github.com/clangremlini/fet-loader-yougame/actions)
 
 <br />
 <p align="center">
@@ -24,11 +24,11 @@
 - A more shitcode
 
 ## How to compile
-- Clone the repository with the command `git clone https://github.com/clangremlini/fet-loader | cd fet-loader | git submodule update --init --recursive`
+- Clone the repository with the command `git clone https://github.com/clangremlini/fet-loader-yougame | cd fet-loader-yougame | git submodule update --init --recursive`
 - Run `COMPILE.bat`
 
 ## Frequent problems and their solutions
-- See [this](https://github.com/clangremlini/fet-loader/discussions?discussions_q=category%3A%22Solved+bugs%22)
+- See [this](https://github.com/clangremlini/fet-loader-yougame/discussions?discussions_q=category%3A%22Solved+bugs%22)
 
 ## Contributing
 
@@ -57,9 +57,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Custom repo: [zrn1x](https://github.com/oliyase)
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/clangremlini/fet-loader.svg?style=flat-square
-[contributors-url]: https://github.com/clangremlini/fet-loader/graphs/contributors
-[stars-shield]: https://img.shields.io/github/stars/clangremlini/fet-loader.svg?style=flat-square
-[stars-url]: https://github.com/clangremlini/fet-loader/stargazers
-[license-shield]: https://img.shields.io/github/license/clangremlini/fet-loader.svg?style=flat-square
-[license-url]: https://github.com/clangremlini/fet-loader/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/clangremlini/fet-loader-yougame.svg?style=flat-square
+[contributors-url]: https://github.com/clangremlini/fet-loader-yougame/graphs/contributors
+[stars-shield]: https://img.shields.io/github/stars/clangremlini/fet-loader-yougame.svg?style=flat-square
+[stars-url]: https://github.com/clangremlini/fet-loader-yougame/stargazers
+[license-shield]: https://img.shields.io/github/license/clangremlini/fet-loader-yougame.svg?style=flat-square
+[license-url]: https://github.com/clangremlini/fet-loader-yougame/blob/master/LICENSE.txt

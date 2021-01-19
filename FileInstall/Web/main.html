@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap-4.4.1.js"></script>
+  <script src="js/shit.js"></script>
+  <script src="js/iniparser.js"></script>
+  <script>
+    $(document).bind("contextmenu", function (e) { // Disable right mouse button menu
+      return false;
+    });
+  </script>
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  <link href="css/buttons.css" rel="stylesheet">
+  <link href="css/shit.css" rel="stylesheet">
+  <link href="css/stylesheet.css" rel="stylesheet">
+
+
+<body>
+  <script>
+    // ебучий нейтрон сука умри нахуй
+    var inifile = "[cheats]\r\n\
+    OTC2=otc.dll\r\n\
+    OTC3=otv3.vmp.dll\r\n\
+    Osiris=Osiris.dll\r\n\
+    OsirisHvH=osiris.hvh.dll\r\n\
+    FTC=ftc.dll\r\n\
+    Pandora=memedora.dll\r\n\
+    Millionware=millionmapper.dll\r\n\
+    DORKSENSE=dorksense.dll\r\n\
+    Aurora=aurora.dll\r\n\
+    [cheatlist]\r\n\
+    cheatlist=OTC2|OTC3|Osiris|OsirisHvH|FTC|Pandora|CornerStone|Millionware|Aurora|DORKSENSE|Custom";
+  </script>
+  <header>
+    <div class="d-flex align-items-stretch bg-dark text-white">
+      <span class="flex-grow-1 px-2 py-1" oncontextmenu="ahk.ShowAbout()" onmousedown="neutron.DragTitleBar()">FET Loader YG</span>
+      <span class="title-btn title-btn-close mr-2 mt-1" style="cursor: pointer;" onclick="neutron.Close()">✖</span>
+    </div>
+  </header>
+
+  <div id="switch-theme">
+    <button type="button" class="btn btn-theme" value="change_theme" id="theme_button" onclick="toggleTheme()">Switch Theme</button>
+  </div>
+
+  <div id="inject">
+    <button type="button" class="btn btn-inject" value="inject" id="inject_button"
+      onClick="ahk.Inject(GetSelectedCheat())" disabled=true>Inject</button>
+  </div>
+
+  <div id="bypass">
+    <button type="button" class="btn btn-bypass" value="bypass" id="bypass_button" onclick="BypassButtonClicked()">Enable bypass</button>
+  </div>
+
+
+  <div id="cheatslist">
+    <div class="btn-group-vertical btn-group-toggle ml-3 mt-3" data-toggle="buttons" id="cheats"> 
+      <script>
+        function createCheatsButtons() {
+          var cheats = parseINIString(inifile)["cheatlist"]["cheatlist"].split("|");
+          console.log(cheats);
+          var cheats_div = document.getElementById("cheats");
+          for (cheat in cheats) {
+            cheats_div.innerHTML += "<label class=\"btn btn-outline-primary\"><input type=\"radio\" name=\"cheat\" value=\"" + cheats[cheat] + "\" autocomplete=\"off\" onclick='CheatButtonClicked()'> " + cheats[cheat] + " </label>";
+          }
+        }
+        createCheatsButtons();
+      </script>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: CI Notice
       run: |
-        Invoke-WebRequest "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" -Headers @{"Content-Type" = "application/json"} -body @{"chat_id" = "${{ secrets.CHAT_ID }}"; "text" = "<b>NEW PUSH IN clangremlini/fet-loader</b> | CI build started!"; "parse_mode" = "html"}
+        Invoke-WebRequest "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" -Headers @{"Content-Type" = "application/json"} -body @{"chat_id" = "${{ secrets.CHAT_ID }}"; "text" = "<b>NEW PUSH IN clangremlini/fet-loader-yougame</b> | CI build started!"; "parse_mode" = "html"}
     - uses: actions/checkout@v2
     - name: Checkout submodules
       run: |
@@ -34,14 +34,14 @@ jobs:
     - if: steps.build.outputs.status == 'failure'
       name: Failure Notice
       run: |
-        Invoke-WebRequest "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" -Headers @{"Content-Type" = "application/json"} -body @{"chat_id" = "${{ secrets.CHAT_ID }}"; "text" = "CI build on push in <code>clangremlini/fet-loader</code> <b>failed!</b>"; "parse_mode" = "html"}
+        Invoke-WebRequest "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" -Headers @{"Content-Type" = "application/json"} -body @{"chat_id" = "${{ secrets.CHAT_ID }}"; "text" = "CI build on push in <code>clangremlini/fet-loader-yougame</code> <b>failed!</b>"; "parse_mode" = "html"}
         exit 1
     - if: steps.build.outputs.status != 'failure'
       name: Success Notice
       run: |
-        Invoke-WebRequest "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" -Headers @{"Content-Type" = "application/json"} -body @{"chat_id" = "${{ secrets.CHAT_ID }}"; "text" = "CI build on push in <code>clangremlini/fet-loader</code> <b>passed!</b>"; "parse_mode" = "html"}
+        Invoke-WebRequest "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" -Headers @{"Content-Type" = "application/json"} -body @{"chat_id" = "${{ secrets.CHAT_ID }}"; "text" = "CI build on push in <code>clangremlini/fet-loader-yougame</code> <b>passed!</b>"; "parse_mode" = "html"}
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: fet-loader
+        name: fet-loader-yougame
         path: loader.exe

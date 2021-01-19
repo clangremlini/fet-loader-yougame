@@ -1,11 +1,3 @@
-function getText() {    
-    var xmlHttp = new XMLHttpRequest();
-    var linktomainfile = "https://github.com/clangremlini/fetloader-dll-repo/raw/main/cheats.ini";
-    xmlHttp.open("GET", linktomainfile, false);
-    xmlHttp.send(null);
-    return xmlHttp.responseText;
-  }
-  
 function parseINIString(data) {
   var regex = {
     section: /^\s*\[\s*([^\]]*)\s*\]\s*$/,
