@@ -24,18 +24,44 @@
 <body>
   <script>
     // ебучий нейтрон сука умри нахуй
-    var inifile = "[cheats]\r\n\
-    OTC2=otc.dll\r\n\
-    OTC3=otv3.vmp.dll\r\n\
-    Osiris=Osiris.dll\r\n\
-    OsirisHvH=osiris.hvh.dll\r\n\
-    FTC=ftc.dll\r\n\
-    Pandora=memedora.dll\r\n\
-    Millionware=millionmapper.dll\r\n\
-    DORKSENSE=dorksense.dll\r\n\
-    Aurora=aurora.dll\r\n\
-    [cheatlist]\r\n\
-    cheatlist=OTC2|OTC3|Osiris|OsirisHvH|FTC|Pandora|CornerStone|Millionware|Aurora|DORKSENSE|Custom";
+     var inifile = "[cheats]\r\n\
+                    OTC2=otc.dll\r\n\
+                    OTC3=otv3.vmp.dll\r\n\
+                    Osiris=Osiris.dll\r\n\
+                    OsirisHvH=osiris.hvh.dll\r\n\
+                    FTC=ftc.dll\r\n\
+                    Pandora=memedora.dll\r\n\
+                    Millionware=millionmapper.dll\r\n\
+                    DORKSENSE=dorksense.dll\r\n\
+                    Aurora=aurora.dll\r\n\
+                    Reborn=reborn.dll\r\n\
+                    [cheatlist]\r\n\
+                    cheatlist=OTC2|OTC3|Osiris|OsirisHvH|FTC|Pandora|CornerStone|Millionware|Aurora|DORKSENSE|Reborn|Custom\r\n\
+                    [status]\r\n\
+                    OTC2=Use at own risk\r\n\
+                    OTC3=DETECT\r\n\
+                    Osiris=UNDETECT\r\n\
+                    OsirisHvH=UNDETECT\r\n\
+                    FTC=Use at own risk\r\n\
+                    Pandora=Use at own risk\r\n\
+                    Millionware=Use at own risk\r\n\
+                    aurora=UNDETECT\r\n\
+                    DORKSENSE=Use at own risk\r\n\
+                    Custom=Use at own risk\r\n\
+                    Reborn=DETECT\r\n\
+                    [info]\r\n\
+                    OTC2=Onetap V2 crack, Legit + Rage\r\n\
+                    OTC3=Onetap V3 crack, Legit + Rage. Less features but good JS API. Everything depends on your config\r\n\
+                    Osiris=Free cross-platform Legit + Semi-rage cheat\r\n\
+                    OsirisHvH=Osiris with separate Rage tab (not so good in most cases)\r\n\
+                    FTC=Crack of fatality.win 2019, Legit + Rage\r\n\
+                    Pandora=Fine Legit + Rage cheat, better than OTC3, can show some good results against private cheats\r\n\
+                    Millionware=Best movement cheat\r\n\
+                    CornerStone=Free external legit cheat\r\n\
+                    Aurora=Free Legit cheat with good UI\r\n\
+                    DORKSENSE=???\r\n\
+                    Custom=Your own DLL. (if you want more integrated DLLs then PM me in tlgrm: @clownl3ss)\r\n\
+                    Reborn=Crack of RebornHack";
   </script>
   <header>
     <div class="d-flex align-items-stretch bg-dark text-white">
@@ -71,6 +97,12 @@
         }
         createCheatsButtons();
       </script>
+      <div id="cheatstatus">
+        <span class="detect-status" id="shit"></span>
+      </div>
+      <div id="cheatinfo">
+        <span class="cheat-info" id="shit228"></span>
+      </div>
     </div>
   </div>
 

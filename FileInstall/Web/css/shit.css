@@ -15,6 +15,15 @@
     user-select: none;
 }
 
+.cheat-info{
+    position: absolute;
+    color: #1d97aa;
+    left: 135px;
+    width: 230px;
+    top: 50px;
+    white-space: pre-line;
+    word-wrap: break-all;
+}
 
 
 body {
